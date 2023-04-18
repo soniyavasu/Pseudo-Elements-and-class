@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pseudo Elements and Classes</title>
+<style>
+a:active {
+  background-color: yellow;
+  }
+  
+p:first-child {
+  background-color: yellow;
+}
+
+p:last-child {
+  background: #ff0000;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+.one::first-line {
+  background-color: yellow;
+}
+.two::first-letter {
+  font-size: 200%;
+  color: #8A2BE2;
+}
+.three{
+ position:relative;
+ padding-left:50px;
+}
+.three::before {
+  content:"";
+  position:absolute;
+  border:1px solid red;
+  border-width:0 21px 0 10px;
+  height:3px;
+  top: 8px;
+  left:10px;
+  
+}
+.four::after {
+  content:"soniya";
+  color:red;
+}
+li::marker { 
+  color: red;
+  font-size: 23px;
+}
+.five::selection {
+  color: red;
+  background: yellow;
+}
+input:focus {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1 style="color:red; text-align:center;"><u>Pseudo Classes</u></h1>
+
+	<h1 style="color:blue;"><u>:active Selector</u></h1>
+		<a href="https://www.w3schools.com">W3schools.com</a><br>
+		<a href="https://www.w3schools.com/html/">HTML</a><br>
+		<a href="https://www.w3schools.com/css/">CSS</a>
+
+<p><b>Note:</b> The :active selector styles the active link.</p>
+
+<hr>
+
+	<h1  style="color:green;"><u>:first-child Selector and :last-child Selector</u></h1></u></h1>
+		<p>This paragraph is the first child of its parent (body).</p>
+	<p>This paragraph is not the first child of its parent (body).</p>
+
+		<div>
+		  <p>This paragraph is the first child of its parent (div).</p>
+		  <p>This paragraph is not the first child of its parent (div).</p>
+		</div>
+	
+		
+
+<hr>
+
+
+	<h1  style="color:orange;"><u>:hover Selector</u></h1>	
+		<p>The :hover selector style links on mouse-over:</p>
+
+			<a href="https://www.w3schools.com">w3schools.com</a>
+			<a href="https://www.wikipedia.org">wikipedia.org</a>
+			
+<hr>
+
+<h1  style="color:pink;"><u>:focus Selector</u></h1>
+	<p>Click inside the text fields to see a yellow background:</p>
+
+		<form>
+		  First name: <input type="text" name="firstname"><br>
+		  Last name: <input type="text" name="lastname">
+		</form>
+
+
+<h1 style="color:red; text-align:center;"><u>Pseudo element</u></h1>
+
+
+<h1>::first-line</h1>
+
+	<h2>WWF's Mission Statement</h2>
+		<p class="one">To stop the degradation of the planet's natural environment and to build a 
+		future in which humans live in harmony with nature, by; conserving the world's 
+		biological diversity, ensuring that the use of renewable natural resources is sustainable, 
+		and promoting the reduction of pollution and wasteful consumption.</p>
+
+<hr>
+
+<h1>::first-letter</h1>
+
+	
+		<p class="two">My name is Donald.</p>
+		<p class="two">I live in Duckburg.</p>
+		<p class="two">My best friend is Mickey.</p>
+
+<hr>
+
+
+<h1>::before</h1>
+
+	<p class="three">My name is Donald</p>
+	<p class="three">I live in Ducksburg</p>
+	
+<hr>
+
+
+<h1>::after</h1>
+
+	<p class="four">My name is Donald</p>
+	<p class="four">I live in Ducksburg</p>
+
+
+<hr>
+
+
+<h1>::marker</h1>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+
+<hr>
+
+
+
+<h1>::selection</h1>
+
+<p class="five">This is a paragraph.</p>
+<div class="five">This is some text in a div element.</div>
+
+</body>
+</html>
